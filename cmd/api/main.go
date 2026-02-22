@@ -33,7 +33,7 @@ func main() {
 		serverAddr:  env.GetString("SERVER_ADDR", ":8080"),
 		apiURL:      env.GetString("EXTERNAL_URL", "localhost:8080"),
 		frontendURL: env.GetString("FRONTEND_URL", "http://localhost:3000"),
-		namespace:   env.GetString("NAMESPACE_ENV", "development"),
+		namespace:   env.GetString("NAMESPACE_ENV", "production"),
 		db: dbConfig{
 			addr:         env.GetString("DATABASE_URL", "postgres://admin:adm1npass@localhost/social?sslmode=disable"),
 			maxOpenConns: env.GetInt("DB_MAX_OPEN_CONNS", 30),
