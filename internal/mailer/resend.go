@@ -5,10 +5,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"gopher_social/internal/store"
-	_ "gopher_social/internal/store"
 	"text/template"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/store"
+	_ "github.com/sandoxlabs99/gopher_social/internal/store"
 
 	"github.com/resend/resend-go/v3"
 	"go.uber.org/zap"

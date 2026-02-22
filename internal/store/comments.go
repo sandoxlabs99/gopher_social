@@ -3,7 +3,8 @@ package store
 import (
 	"context"
 	"database/sql"
-	"gopher_social/internal/models"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 )
 
 type CommentStore struct {

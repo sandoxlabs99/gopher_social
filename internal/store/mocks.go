@@ -3,8 +3,9 @@ package store
 import (
 	"context"
 	"database/sql"
-	"gopher_social/internal/models"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 )
 
 func NewMockStore() Storage {

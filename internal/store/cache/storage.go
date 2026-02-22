@@ -2,7 +2,8 @@ package cache
 
 import (
 	"context"
-	"gopher_social/internal/models"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 
 	"github.com/redis/go-redis/v9"
 )

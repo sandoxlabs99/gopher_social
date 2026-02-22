@@ -11,12 +11,12 @@ import (
 	"syscall"
 	"time"
 
-	"gopher_social/docs" // This is required to generate swagger docs
-	"gopher_social/internal/auth"
-	"gopher_social/internal/mailer"
-	"gopher_social/internal/ratelimiter"
-	"gopher_social/internal/store"
-	"gopher_social/internal/store/cache"
+	"github.com/sandoxlabs99/gopher_social/docs" // This is required to generate swagger docs
+	"github.com/sandoxlabs99/gopher_social/internal/auth"
+	"github.com/sandoxlabs99/gopher_social/internal/mailer"
+	"github.com/sandoxlabs99/gopher_social/internal/ratelimiter"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
+	"github.com/sandoxlabs99/gopher_social/internal/store/cache"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"

@@ -2,15 +2,16 @@ package main
 
 import (
 	"expvar"
-	"gopher_social/internal/auth"
-	"gopher_social/internal/db"
-	"gopher_social/internal/env"
-	"gopher_social/internal/mailer"
-	"gopher_social/internal/ratelimiter"
-	"gopher_social/internal/store"
-	"gopher_social/internal/store/cache"
 	"runtime"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/auth"
+	"github.com/sandoxlabs99/gopher_social/internal/db"
+	"github.com/sandoxlabs99/gopher_social/internal/env"
+	"github.com/sandoxlabs99/gopher_social/internal/mailer"
+	"github.com/sandoxlabs99/gopher_social/internal/ratelimiter"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
+	"github.com/sandoxlabs99/gopher_social/internal/store/cache"
 
 	"github.com/joho/godotenv"
 	"github.com/redis/go-redis/v9"

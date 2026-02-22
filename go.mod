@@ -1,4 +1,4 @@
-module gopher_social
+module github.com/sandoxlabs99/gopher_social
 
 go 1.25.1
 

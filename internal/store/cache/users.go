@@ -4,8 +4,9 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"gopher_social/internal/models"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 
 	"github.com/redis/go-redis/v9"
 )

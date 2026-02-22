@@ -4,12 +4,13 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
-	"gopher_social/internal/mailer"
-	"gopher_social/internal/models"
-	"gopher_social/internal/store"
 	"net/http"
 	"strconv"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/mailer"
+	"github.com/sandoxlabs99/gopher_social/internal/models"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"

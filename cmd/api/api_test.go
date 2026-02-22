@@ -1,11 +1,12 @@
 package main
 
 import (
-	"gopher_social/internal/ratelimiter"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/ratelimiter"
 )
 
 func TestRateLimiterMiddlware(t *testing.T) {

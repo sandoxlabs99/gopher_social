@@ -1,8 +1,9 @@
 package main
 
 import (
-	"gopher_social/internal/utils"
 	"net/http"
+
+	"github.com/sandoxlabs99/gopher_social/internal/utils"
 )
 
 // GetUserFeed godoc

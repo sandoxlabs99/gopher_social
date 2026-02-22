@@ -1,9 +1,10 @@
 package main
 
 import (
-	"gopher_social/internal/store/cache"
 	"net/http"
 	"testing"
+
+	"github.com/sandoxlabs99/gopher_social/internal/store/cache"
 
 	"github.com/stretchr/testify/mock"
 )

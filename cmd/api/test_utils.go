@@ -1,13 +1,14 @@
 package main
 
 import (
-	"gopher_social/internal/auth"
-	"gopher_social/internal/ratelimiter"
-	"gopher_social/internal/store"
-	"gopher_social/internal/store/cache"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/sandoxlabs99/gopher_social/internal/auth"
+	"github.com/sandoxlabs99/gopher_social/internal/ratelimiter"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
+	"github.com/sandoxlabs99/gopher_social/internal/store/cache"
 
 	"go.uber.org/zap"
 )

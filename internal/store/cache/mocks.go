@@ -2,8 +2,9 @@ package cache
 
 import (
 	"context"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 	"github.com/stretchr/testify/mock"
-	"gopher_social/internal/models"
 )
 
 func NewMockRedisStorage() Storage {

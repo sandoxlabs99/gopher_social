@@ -6,8 +6,9 @@ import (
 	"database/sql"
 	"encoding/hex"
 	"errors"
-	"gopher_social/internal/models"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 )
 
 var (

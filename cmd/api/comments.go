@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"gopher_social/internal/models"
 	"net/http"
 	"strconv"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
 
 	"github.com/go-chi/chi/v5"
 )

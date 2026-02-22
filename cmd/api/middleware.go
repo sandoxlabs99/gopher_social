@@ -4,11 +4,12 @@ import (
 	"context"
 	"encoding/base64"
 	"fmt"
-	"gopher_social/internal/models"
-	"gopher_social/internal/store"
 	"net/http"
 	"strconv"
 	"strings"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
 
 	"github.com/golang-jwt/jwt/v5"
 )

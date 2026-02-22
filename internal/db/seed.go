@@ -4,10 +4,11 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"gopher_social/internal/models"
-	"gopher_social/internal/store"
 	"log"
 	"math/rand"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
 )
 
 type usersData struct {

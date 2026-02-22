@@ -4,9 +4,10 @@ import (
 	"context"
 	"database/sql"
 	"errors"
-	"gopher_social/internal/models"
-	"gopher_social/internal/utils"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
+	"github.com/sandoxlabs99/gopher_social/internal/utils"
 )
 
 var (

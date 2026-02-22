@@ -1,11 +1,12 @@
 package main
 
 import (
-	"gopher_social/internal/db"
-	"gopher_social/internal/env"
-	"gopher_social/internal/store"
 	"log"
 	"time"
+
+	"github.com/sandoxlabs99/gopher_social/internal/db"
+	"github.com/sandoxlabs99/gopher_social/internal/env"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
 )
 
 type seedDBConfig struct {

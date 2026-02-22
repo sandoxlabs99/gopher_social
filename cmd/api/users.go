@@ -4,10 +4,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"gopher_social/internal/models"
-	"gopher_social/internal/store"
 	"net/http"
 	"strconv"
+
+	"github.com/sandoxlabs99/gopher_social/internal/models"
+	"github.com/sandoxlabs99/gopher_social/internal/store"
 
 	"github.com/go-chi/chi/v5"
 )
