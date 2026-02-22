@@ -14,7 +14,6 @@ import (
 type usersData struct {
 	firstname []string
 	lastname  []string
-	username  []string
 }
 
 var usersdata = usersData{
