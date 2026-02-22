@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:18.0-alpine3.22
+    container_name: go-postgres-db
+    environment:
+      POSTGRES_DB: social
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adm1npass
+    volumes:
+      - db-data-gopher:/var/lib/postgresql/data
+      # - ./scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  redis:
+    image: redis:8.6.0-alpine3.23
+    container_name: redis-social
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-social-data:/data
+    command:
+      [
+        "redis-server",
+        "--save", "60", "1",
+        "--appendonly", "yes",
+        "--loglevel", "warning",
+      ]
+    restart: unless-stopped
+
+  redis-commander:
+    hostname: redis-commander
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - "127.0.0.1:8081:8081"
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+volumes:
+  db-data-gopher:
+  redis-social-data:
+
