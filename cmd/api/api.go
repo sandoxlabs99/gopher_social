@@ -124,7 +124,7 @@ func (app *application) mount() http.Handler {
 	r.Use(middleware.Timeout(60 * time.Second))
 
 	r.Route("/v1", func(r chi.Router) {
-		r.With(app.BasicAuthentication()).Get("/health", app.healthCheckHandler)
+		r.Get("/health", app.healthCheckHandler)
 
 		// expvar for observability and metrics
 		r.With(app.BasicAuthentication()).Get("/debug/vars", expvar.Handler().ServeHTTP)
