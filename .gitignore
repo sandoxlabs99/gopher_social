@@ -34,7 +34,6 @@ go.work.sum
 # .vscode/
 
 /bin
-/docs
 
 web/node_modules/
 web/.env
