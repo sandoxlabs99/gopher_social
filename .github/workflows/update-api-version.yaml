@@ -3,31 +3,61 @@ name: Update API Version and Release
 on:
   push:
     branches:
-      - main
+      - main # Trigger on changes to main
 
 permissions:
-  contents: write
+  contents: write # Needed to push branches and create PRs
 
 jobs:
   update-version:
     runs-on: ubuntu-24.04
     steps:
+      # Checkout repo
       - uses: actions/checkout@v6
 
-      - name: Extract latest version from CHANGELOG.md
+      # Extract latest version from CHANGELOG.md
+      - name: Extract latest version
         id: get-version
         run: |
           VERSION=$(grep -oP '\[\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md | head -1)
-          echo "::set-output name=VERSION::$VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-      - name: Update version in cmd/api/main.go
+      # Update version in cmd/api/main.go
+      - name: Update version in main.go
         run: |
-          sed -i "s/const version = \".*\"/const version = \"${{ steps.get_version.outputs.VERSION }}\"/" cmd/api/main.go
+          sed -i "s/const version = \".*\"/const version = \"${VERSION}\"/" cmd/api/main.go
 
-      - name: Commit and push if changed
+      # Configure Git user
+      - name: Setup Git
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      # Create temporary branch for PR
+      - name: Create temp branch
+        run: |
+          BRANCH="update-version-${GITHUB_RUN_ID}"
+          git checkout -b $BRANCH
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+
+      # Commit changes if any
+      - name: Commit changes
+        run: |
           git add cmd/api/main.go
-          git commit -m "Update version to ${{ steps.get_version.outputs.VERSION }}" || echo "No changes to commit"
-          git push
+          git diff --cached --quiet || git commit -m "Update version to ${VERSION}"
+
+      # Push temp branch
+      - name: Push branch
+        run: |
+          git push origin HEAD:${BRANCH}
+
+      # Create Pull Request
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.BRANCH }}
+          base: main
+          title: "Update version to ${VERSION}"
+          body: |
+            Automated version update from CHANGELOG.md
