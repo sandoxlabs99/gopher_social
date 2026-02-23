@@ -19,4 +19,4 @@ jobs:
         with:
           # Keep PAT so downstream events (like release) can trigger other workflows.
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-          release-type: simple
+          # release-type: simple
