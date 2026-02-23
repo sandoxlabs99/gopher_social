@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/sandoxlabs99/gopher_social/compare/v1.2.1...v1.2.2) (2026-02-23)
+
+
+### Bug Fixes
+
+* add update api version action ([724e122](https://github.com/sandoxlabs99/gopher_social/commit/724e122eeaf04fc7204caa55bec53b11ebf3eaec))
+
 ## [1.2.1](https://github.com/sandoxlabs99/gopher_social/compare/v1.2.0...v1.2.1) (2026-02-23)
 
 
