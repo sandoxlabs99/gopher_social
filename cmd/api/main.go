@@ -18,7 +18,8 @@ import (
 	"go.uber.org/zap"
 )
 
-const version = "0.0.1" // semvar (semantic versioning)
+// semvar (semantic versioning)
+const version = "0.0.1"
 
 func main() {
 	// Logger
