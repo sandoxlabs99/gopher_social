@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/sandoxlabs99/gopher_social/compare/v1.2.0...v1.2.1) (2026-02-23)
+
+
+### Bug Fixes
+
+* remove dummy text file ([1febad1](https://github.com/sandoxlabs99/gopher_social/commit/1febad1966f36ae00f2109c0016c50ceaeaa37e7))
+
 ## [1.2.0](https://github.com/sandoxlabs99/gopher_social/compare/v1.1.1...v1.2.0) (2026-02-23)
 
 
