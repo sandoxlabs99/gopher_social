@@ -1,1 +1,0 @@
-lets assume this is a new feature. Purpose is to test if the action updates the version constant in main.go
