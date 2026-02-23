@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/sandoxlabs99/gopher_social/compare/v1.2.2...v1.2.3) (2026-02-23)
+
+
+### Bug Fixes
+
+* apply a fix on the version update issue ([8733e63](https://github.com/sandoxlabs99/gopher_social/commit/8733e630cffa9730371325106db1b96c8bdfe19a))
+
 ## [1.2.2](https://github.com/sandoxlabs99/gopher_social/compare/v1.2.1...v1.2.2) (2026-02-23)
 
 
