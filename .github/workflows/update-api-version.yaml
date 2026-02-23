@@ -25,7 +25,9 @@ jobs:
       # Update version in cmd/api/main.go
       - name: Update version in main.go
         run: |
-          sed -i "s/const version = \".*\"/const version = \"${VERSION}\"/" cmd/api/main.go
+          sed -i 's/^const version = ".*"/const version = "'"${VERSION}"'"/' cmd/api/main.go
+          echo "Updated version in main.go:"
+          grep 'const version' cmd/api/main.go
 
       # Configure Git user
       - name: Setup Git
