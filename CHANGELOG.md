@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/sandoxlabs99/gopher_social/compare/v1.1.0...v1.1.1) (2026-02-23)
+
+
+### Bug Fixes
+
+* change the order of events in the update-api-version action ([6cae1a3](https://github.com/sandoxlabs99/gopher_social/commit/6cae1a35d143dbe2dd039489b57391254714ca5b))
+
 ## [1.1.0](https://github.com/sandoxlabs99/gopher_social/compare/v1.0.0...v1.1.0) (2026-02-23)
 
 
