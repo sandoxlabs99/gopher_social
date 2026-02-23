@@ -15,6 +15,19 @@ jobs:
       # Checkout repo
       - uses: actions/checkout@v6
 
+      # Configure Git user
+      - name: Setup Git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      # Create temporary branch for PR
+      - name: Create temp branch
+        run: |
+          BRANCH="update-version-${GITHUB_RUN_ID}"
+          git checkout -b $BRANCH
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+
       # Extract latest version from CHANGELOG.md
       - name: Extract latest version
         id: get-version
@@ -28,19 +41,6 @@ jobs:
           sed -i 's/^const version = ".*"/const version = "'"${VERSION}"'"/' cmd/api/main.go
           echo "Updated version in main.go:"
           grep 'const version' cmd/api/main.go
-
-      # Configure Git user
-      - name: Setup Git
-        run: |
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
-
-      # Create temporary branch for PR
-      - name: Create temp branch
-        run: |
-          BRANCH="update-version-${GITHUB_RUN_ID}"
-          git checkout -b $BRANCH
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
 
       # Commit changes if any
       - name: Commit changes
