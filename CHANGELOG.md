@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/sandoxlabs99/gopher_social/compare/v1.0.0...v1.1.0) (2026-02-23)
+
+
+### Features
+
+* update api version automatically ([7f39d70](https://github.com/sandoxlabs99/gopher_social/commit/7f39d70f213a5738788d5b9838d2d3f1c87c6131))
+
+
+### Bug Fixes
+
+* update-version action to adhere to branch protection rules ([16e9feb](https://github.com/sandoxlabs99/gopher_social/commit/16e9feb5ff3c1b6ec4f9db24d81b8e5868ecfd25))
+
 ## 1.0.0 (2026-02-23)
 
 
