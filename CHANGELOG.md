@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/sandoxlabs99/gopher_social/compare/v1.1.1...v1.2.0) (2026-02-23)
+
+
+### Features
+
+* add dummy text file to test version updates ([d16f667](https://github.com/sandoxlabs99/gopher_social/commit/d16f667e1cef2b348a3352fd1a1a7785c3830ca5))
+
+
+### Bug Fixes
+
+* make release config a hidden file ([919079b](https://github.com/sandoxlabs99/gopher_social/commit/919079b50de1643a83ad5dca524724a5aa811172))
+
 ## [1.1.1](https://github.com/sandoxlabs99/gopher_social/compare/v1.1.0...v1.1.1) (2026-02-23)
 
 
